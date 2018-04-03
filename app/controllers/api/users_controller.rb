@@ -15,7 +15,7 @@ class Api::UsersController < ApplicationController
     if @user
       render :show
     else
-      render :json: ['Cannot find this user']
+      render json: ['Cannot find this user'], status: 422
     end
   end
 
